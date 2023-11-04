@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Decryption</title>
+</head>
+<body>
+    <h1>Text Decryption</h1>
+    <form method="post" action="{% url 'decrypt' %}">
+        {% csrf_token %}
+        <label for="key">Enter key to decrypt:</label>
+        <input type="text" name="key" id="key" required>
+        <br>
+        <label for="encrypted_text">Enter encrypted text:</label>
+        <input type="text" name="encrypted_text" id="encrypted_text" required>
+        <br>
+        <button type="submit">Decrypt</button>
+    </form>
+</body>
+</html>

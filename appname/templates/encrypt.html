@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Encryption</title>
+</head>
+<body>
+    <h1>Text Encryption</h1>
+    <form method="post" action="{% url 'encrypt' %}">
+        {% csrf_token %}
+        <label for="text">Enter text to encrypt:</label>
+        <input type="text" name="text" id="text" required>
+        <br>
+        <button type="submit">Encrypt</button>
+    </form>
+</body>
+</html>
